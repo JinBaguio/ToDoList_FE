@@ -1,0 +1,108 @@
+<div class="container-xl">
+  <div class="table-responsive" style="padding-top: 100px">
+    <div class="table-wrapper">
+      <div class="table-title">
+        <div class="row">
+          <div class="col-sm-6">
+            <h4><b>Update List</b></h4>
+          </div>
+          <div class="col-sm-6" style="padding-left: 560px;">
+            <a href="#" routerLink="/Home" class="btn btn-success back"><i class='fas fa-arrow-circle-left'></i>
+              &nbsp;Back</a>
+          </div>
+        </div>
+      </div>
+      <form #updateForm="ngForm">
+        <div class="table-content">
+          <div class="form-group p-10 row">
+            <div class="col-sm-3">
+              <label for="id" class="p-t-b-10">ID<span class="requiredStar">*</span></label>
+            </div>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="id" required maxlength="255"
+                [(ngModel)]="editListForm.id" name="id" #id="ngModel">
+              <div *ngIf="id.errors && isSubmitted" class="alert alert-danger validationError">
+                <div [hidden]="!id.errors?.['required']">
+                  ID is required
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group p-10 row">
+            <div class="col-sm-3">
+              <label for="no" class="p-t-b-10">No.<span class="requiredStar">*</span></label>
+            </div>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="no" required maxlength="255"
+                [(ngModel)]="editListForm.no" name="no" #no="ngModel">
+              <div *ngIf="no.errors && isSubmitted" class="alert alert-danger validationError">
+                <div [hidden]="!no.errors?.['required']">
+                  No. is required
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group p-10 row">
+            <div class="col-sm-3">
+              <label for="taskDesc" class="p-t-b-10">Task Description<span class="requiredStar">*</span></label>
+            </div>
+            <div class="col-sm-9">
+              <textarea class="form-control" id="taskDesc" required 
+                [(ngModel)]="editListForm.taskDesc" name="taskDesc" #taskDesc="ngModel"></textarea>
+              <div *ngIf="taskDesc.errors && isSubmitted" class="alert alert-danger validationError">
+                <div [hidden]="!taskDesc.errors?.['required']">
+                  Task Description is required
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group p-10 row">
+            <div class="col-sm-3">
+              <label class="p-t-b-10">Task Assigned<span class="requiredStar">*</span></label>
+            </div>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="taskAssingd" required maxlength="255"
+                [(ngModel)]="editListForm.taskAssingd" name="taskAssingd" #taskAssingd="ngModel">
+              <div *ngIf="taskAssingd.errors && isSubmitted" class="alert alert-danger validationError">
+                <div [hidden]="!taskAssingd.errors?.['required']">
+                  Task Assigned is required
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group p-10 row">
+            <div class="col-sm-3">
+              <label class="p-t-b-10">DateDue<span class="requiredStar">*</span></label>
+            </div>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="dtDue" required maxlength="30" 
+                [(ngModel)]="editListForm.dtDue" name="dtDue" #dtDue="ngModel">
+              <div *ngIf="dtDue.errors && isSubmitted" class="alert alert-danger validationError">
+                <div [hidden]="!dtDue.errors?.['required']">
+                  Date Due is required
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group p-10 row">
+            <div class="col-sm-3">
+              <label class="p-t-b-10">Status<span class="requiredStar">*</span></label>
+            </div>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="status" required maxlength="255"
+                [(ngModel)]="editListForm.status" name="status" #status="ngModel">
+              <div *ngIf="status.errors && isSubmitted" class="alert alert-danger validationError">
+                <div [hidden]="!status.errors?.['required']">
+                  Status is required
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="table-footer">
+          <button class="btn btn-success" (click)="EditList(updateForm.form.valid)">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

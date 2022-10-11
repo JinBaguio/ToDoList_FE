@@ -1,0 +1,68 @@
+<div class="container-xl">
+  <div class="table-responsive" style="padding-top: 100px">
+    <div class="table-wrapper">
+      <div class="table-title">
+        <div class="row">
+          <div class="col-sm-6">
+            <h4><b>View List</b></h4>
+          </div>
+          <div class="col-sm-6" style="padding-left: 560px;">
+            <a href="#" routerLink="/Home" class="btn btn-success back"><i class='fas fa-arrow-circle-left'></i> &nbsp;Back</a>
+          </div>
+        </div>
+      </div>       
+      <table class="table table-striped table-hover table-bordered table-content">
+        <tbody>
+          <tr>
+            <td>
+              <label><b>ID</b></label>
+            </td>
+            <td>
+              <span>{{ listDetail.ID }}</span>              
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label><b>No</b></label>
+            </td>
+            <td>
+              <span>{{ listDetail.No }}</span>              
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label><b>Task Description</b></label>
+            </td>
+            <td>
+              <span>{{ listDetail.TaskDescription }}</span>              
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label><b>Task Assigned</b></label>
+            </td>
+            <td>
+              <span>{{ listDetail.TaskAssigned }}</span>              
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label><b>Date Due</b></label>
+            </td>
+            <td>
+              <span>{{ listDetail.DateDue }}</span>              
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label><b>Status</b></label>
+            </td>
+            <td>
+              <span>{{ listDetail.Status }}</span>              
+            </td>
+          </tr>
+        </tbody>
+      </table>       
+    </div>
+  </div>
+</div>
