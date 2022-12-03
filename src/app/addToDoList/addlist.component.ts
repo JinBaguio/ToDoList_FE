@@ -3,7 +3,7 @@ import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { HttpProviderService } from '../Service/http-provider.service';
-// test push code in macbooks
+
 @Component({
   selector: 'addToDoList',
   templateUrl: './addlist.component.html',
